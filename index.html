@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест по информатике — формат ОГЭ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Тест по информатике</h1>
+      <p class="subtitle">Формат ОГЭ • 14 заданий • Часть 1</p>
+    </header>
+
+    <!-- Экран старта -->
+    <section id="start-screen">
+      <div class="info-box">
+        <p><b>Инструкция:</b> выберите один верный ответ в каждом задании.
+        За каждый правильный ответ — 1 балл.</p>
+        <p>Максимально баллов: 14.<br>
+        Оценка «3» — 5–8 баллов, «4» — 9–12 баллов, «5» — 12–14 баллов.</p>
+      </div>
+      <button id="start-btn" class="primary">Начать тест</button>
+    </section>
+
+    <!-- Экран теста -->
+    <section id="quiz-screen" style="display:none">
+      <div class="progress-bar"><div id="progress"></div></div>
+      <div class="quiz-meta">
+        <span>Задание <span id="current">1</span> из <span id="total"></span></span>
+        <span>Балл: <span id="score">0</span></span>
+      </div>
+      <h2 id="question"></h2> <!-- вопрос -->
+      <div id="answers"></div> <!-- ответ -->
+      <div id="explanation" class="explanation" style="display:none"></div>
+      <button id="next-btn" class="primary" style="display:none">Далее</button>  <!-- кнопка далее -->
+    </section>
+
+    <!-- Экран результата -->
+    <section id="result-screen" style="display:none">
+      <h2 id="result-title"></h2>
+      <div id="result-score" class="big-score"></div>
+      <div id="grade-box" class="grade"></div>
+      <div id="review" class="review"></div>
+      <button id="restart-btn" class="primary">Пройти ещё раз</button>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
